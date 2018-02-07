@@ -1,4 +1,6 @@
 # Production Checklist
+Reference [Oracle Documentation](https://docs.oracle.com/middleware/1221/coherence/administer/deploy_checklist.htm)
+
 This chapter provides a checklist of areas that should be planned for and considered when moving from a development or test environment to a production environment. Solutions and best practices are provided and should be implemented as required. Additional recommendations when using Coherence*Extend can be found in Developing Remote Clients for Oracle Coherence.
 The following sections are included in this chapter:
 
@@ -19,15 +21,15 @@ The following sections are included in this chapter:
 
 ## Network Performance Test and Multicast Recommendations
 
-###Test TCP Network Performance
+### Test TCP Network Performance
 
 Run the message bus test utility to test the actual network speed and determine its capability for pushing large amounts TCP messages. Any production deployment should be preceded by a successful run of the message bus test. See "Running the Message Bus Test Utility," for details. A TCP stack is typically already configured for a network and requires no additional configuration for Coherence. If TCP performance is unsatisfactory, consider changing TCP settings. For common TCP settings that can be tuned, see "TCP Considerations."
 
-###Test Datagram Network Performance
+### Test Datagram Network Performance
 
 Run the datagram test utility to test the actual network speed and determine its capability for pushing datagram messages. Any production deployment should be preceded by a successful run of both tests. See Performing a Network Performance Test, for details. Furthermore, the datagram test utility must be run with an increasing ratio of publishers to consumers, since a network that appears fine with a single publisher and a single consumer may completely fall apart as the number of publishers increases.
 
-###Consider the Use of Multicast
+### Consider the Use of Multicast
 
 The term multicast refers to the ability to send a packet of information from one server and to have that packet delivered in parallel by the network to many servers. Coherence supports both multicast and multicast-free clustering. The use of multicast can be used to ease cluster configuration. However, the use of multicast may not always be possible for several reasons:
 
