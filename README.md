@@ -56,13 +56,15 @@
     
 ### Caching Schemes
   - Distributed cache scheme
-    ```<distributed-scheme>
-<scheme-name>example-distributed</scheme-name>
-<service-name>DistributedCache</service-name>
-<backing-map-scheme>
-<local-scheme>
-<scheme-ref>example-binary-backing-map</scheme-ref>
-</local-scheme>
-</backing-map-scheme>
-<autostart>true</autostart>
-</distributed-scheme>```
+    ```
+    <distributed-scheme>
+	<scheme-name>example-distributed</scheme-name>
+	<service-name>DistributedCache</service-name>
+	<backing-map-scheme>
+	<local-scheme>
+	<scheme-ref>example-binary-backing-map</scheme-ref>
+	</local-scheme>
+	</backing-map-scheme>
+	<autostart>true</autostart>
+	</distributed-scheme>
+    ```
